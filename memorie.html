@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Memorie</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="sistemi.html">I Sistemi</a></li>
+                <li><a href="modellazione.html">Modellazione dei Sistemi</a></li>
+                <li><a href="von-neumann.html">Il modello di Von Neumann</a></li>
+                <li><a href="cpu.html">La CPU</a></li>
+                <li><a href="memorie.html">Tipologie di memoria</a></li>
+                <li><a href="bus.html">I Bus e la comunicazione</a></li>
+                <li><a href="non-von-neumann.html">Le architetture non di Von Neumann</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Le Memorie</h1>
+        <p>Le memorie sono componenti fondamentali di un sistema di calcolo, responsabili della conservazione dei dati e delle istruzioni necessarie per l'elaborazione. 
+            Esistono diversi tipi di memoria, ciascuna con caratteristiche specifiche che le rendono adatte a scopi differenti.</p>
+
+        <section id="ram">
+            <h2>Memoria RAM (Random Access Memory)</h2>
+            <p>La memoria RAM è una memoria volatile, che significa che i dati vengono persi quando il sistema viene spento. 
+                La RAM è utilizzata per memorizzare temporaneamente i dati e le istruzioni che la CPU sta utilizzando attivamente. È essenziale per il funzionamento rapido dei processi, 
+                in quanto offre un accesso veloce ai dati rispetto alla memoria di massa (come gli hard disk).</p>
+            <ul>
+                <li><strong>Tipi di RAM:</strong> La RAM può essere di tipo <em>DRAM</em> (Dynamic RAM), che richiede un refresh periodico, e <em>SRAM</em> (Static RAM), 
+                    che è più veloce e non richiede refresh, ma è più costosa.</li>
+                <li><strong>Velocità:</strong> La RAM è generalmente più veloce rispetto ad altri tipi di memoria, come gli hard disk o SSD, e la sua velocità è misurata in nanosecondi (ns).</li>
+            </ul>
+        </section> <center><img src="Ram.jpg"></img></center>
+
+    
+
+        <section id="rom">
+            <h2>Memoria ROM (Read-Only Memory)</h2>
+            <p>La ROM è una memoria non volatile, il che significa che conserva i dati anche quando il sistema viene spento. 
+                Viene utilizzata principalmente per memorizzare firmware e software di base necessari per l'avvio del sistema (ad esempio, il BIOS o l'UEFI del computer).</p>
+            <ul>
+                <li><strong>Tipi di ROM:</strong> Esistono diverse varianti di ROM, come <em>EPROM</em> (Erasable Programmable ROM) e <em>EEPROM</em> (Electrically Erasable Programmable ROM), 
+                    che permettono di modificare il contenuto della memoria, sebbene più lentamente rispetto alla RAM.</li>
+                <li><strong>Funzione:</strong> La ROM fornisce una memoria di sola lettura che è stabile e affidabile nel lungo termine, 
+                    ed è usata per memorizzare istruzioni fondamentali e costanti per il sistema.</li>
+            </ul>
+        </section> <center><img src="Rom.jpg"></img></center>
+
+
+        <section id="cache">
+            <h2>Memoria Cache</h2>
+            <p>La memoria cache è una memoria ultrarapida che si trova tra la CPU e la RAM. Viene utilizzata per memorizzare temporaneamente i dati e le istruzioni che la CPU utilizza frequentemente, 
+                in modo che l'accesso sia più veloce. La cache riduce il tempo di latenza e aumenta le prestazioni del processore.</p>
+            <ul>
+                
+                <li><strong>Funzione:</strong> La cache riduce il tempo necessario per recuperare i dati dalla RAM, migliorando notevolmente le prestazioni del sistema.</li>
+            </ul>
+        </section> <center><img src="cache.jpg"></img></center>
+
+
+        <section id="flash">
+            <h2>Memoria Flash</h2>
+            <p>La memoria flash è una memoria non volatile utilizzata in dispositivi come chiavette USB, SSD, schede SD e dispositivi mobili. 
+                Conserva i dati anche quando il sistema è spento e offre velocità di accesso più elevate rispetto agli hard disk tradizionali.</p>
+            <ul>
+                <li><strong>Vantaggi:</strong> La memoria flash è resistente agli urti e più compatta rispetto agli hard disk, oltre a offrire velocità superiori in lettura e scrittura rispetto alla memoria magnetica.</li>
+                <li><strong>Tipi:</strong> Esistono due principali tipi di memoria flash: <em>NAND</em> e <em>NOR</em>, con la NAND che è più comunemente usata per la memorizzazione di massa.</li>
+            </ul>
+        </section> <center><img src="flash.jpg"></img></center>
+
+        <section id="hard-disk">
+            <h2>Hard Disk</h2>
+            <p>L'hard disk è un dispositivo di memoria di massa non volatile utilizzato per memorizzare grandi quantità di dati. Gli hard disk sono più lenti rispetto alla memoria RAM e alla cache, 
+                ma offrono capacità di archiviazione molto più elevate a costi relativamente bassi.</p>
+            <ul>
+                <li><strong>Composizione:</strong> Un hard disk è composto da dischi magnetici rotanti (piatti), che memorizzano i dati tramite testine di lettura e scrittura.</li>
+                <li><strong>Funzione:</strong> Viene utilizzato per l'archiviazione permanente dei dati del sistema operativo, dei programmi e dei file utente.</li>
+                <li><strong>SSD vs HDD:</strong> Gli SSD (Solid State Drive) sono dispositivi di memoria di massa che utilizzano la memoria flash, 
+                    offrendo velocità superiori rispetto agli hard disk tradizionali (HDD), che usano tecnologie magnetiche.</li>
+            </ul>
+        </section>  <center><img src="HardDisk.jpg"></img></center>
+
+        <section id="registri">
+            <h2>I Registri</h2>
+            <p>I registri sono piccole unità di memoria situate all'interno della CPU, utilizzate per immagazzinare temporaneamente i dati che la CPU sta elaborando. 
+                I registri sono estremamente veloci e si trovano in quantità limitata rispetto alla RAM.</p>
+            <ul>
+                <li><strong>Funzione:</strong> I registri sono utilizzati per eseguire operazioni aritmetiche, logiche e per l'archiviazione temporanea di valori durante l'esecuzione di un'istruzione. 
+                    Ad esempio, il <em>Program Counter (PC)</em> memorizza l'indirizzo dell'istruzione successiva da eseguire, mentre il <em>Instruction Register (IR)</em> contiene l'istruzione in esecuzione.</li>
+                <li><strong>Tipi di Registri:</strong>
+                    <ul>
+                        <li><strong>Registri Generali:</strong> Utilizzati per l'archiviazione temporanea di valori operativi.</li>
+                        <li><strong>Registri di Stato:</strong> Utilizzati per memorizzare informazioni sullo stato della CPU (ad esempio, il Flag di Condizione).</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section id="celle-di-memoria">
+            <h2>Celle di Memoria</h2>
+            <p>Le celle di memoria sono le unità fondamentali in cui i dati vengono immagazzinati in vari tipi di memoria. Ogni cella può memorizzare un bit di informazione, 
+                che può essere rappresentato da uno stato di carica (ad esempio, in una memoria DRAM) o da un valore elettrico fisico (come in una memoria flash).</p>
+            <ul>
+                <li><strong>Funzione:</strong> Ogni cella è progettata per contenere un valore binario (0 o 1) che viene poi letto o scritto durante le operazioni di memoria.</li>
+                <li><strong>Composizione:</strong> Le celle di memoria sono organizzate in matrici, con righe e colonne, per consentire l'accesso rapido e l'efficienza nello stoccaggio dei dati.</li>
+            </ul>
+        </section>
+
+        <section id="byte">
+            <h2>Come vengono salvati i dati: il Byte</h2>
+            <p>I dati vengono memorizzati in formato binario all'interno delle celle di memoria, e una singola unità di misura di memoria è il <strong>byte</strong>. 
+                Un byte è composto da 8 bit, che possono assumere una delle due possibili configurazioni (0 o 1) per ciascun bit. 
+                Così, un byte può rappresentare valori da 0 a 255, ed è la base per la rappresentazione di dati come numeri, caratteri e istruzioni nei computer.</p>
+            <p>In sintesi, i dati sono memorizzati come sequenze di byte, che vengono gestiti dalle diverse tipologie di memoria per garantire prestazioni elevate e affidabilità nelle operazioni di calcolo.</p>
+        </section>
+
+    </main>
+
+    <footer>
+        studente:Matteo Mastrorosa  - classe:3CA   - email:mastrorosa12955714@luigidellerba.edu.it
+    </footer>
+</body>
+</html>
+
+

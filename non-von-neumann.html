@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architetture Non di Von Neumann</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="sistemi.html">I Sistemi</a></li>
+                <li><a href="modellazione.html">Modellazione dei Sistemi</a></li>
+                <li><a href="von-neumann.html">Il modello di Von Neumann</a></li>
+                <li><a href="cpu.html">La CPU</a></li>
+                <li><a href="memorie.html">Tipologie di memoria</a></li>
+                <li><a href="bus.html">I Bus e la comunicazione</a></li>
+                <li><a href="non-von-neumann.html">Le architetture non di Von Neumann</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2>Introduzione alle Architetture Non di Von Neumann</h2>
+            <p>
+                Le architetture non di Von Neumann rappresentano un approccio alternativo rispetto al classico modello di calcolo introdotto da John von Neumann. 
+                Queste architetture mirano a superare i limiti intrinseci del modello tradizionale, come il collo di bottiglia causato dall'accesso sequenziale alla memoria. 
+                Un esempio comune di tali architetture include i sistemi paralleli, i calcolatori distribuiti e i processori di tipo neuromorfico.
+            </p>
+        </section>
+
+        <section>
+            <h2>Topologie di Rete</h2>
+            <p>
+                Le topologie di rete descrivono la disposizione fisica e logica delle connessioni tra i nodi di un sistema di calcolo parallelo o distribuito. 
+                La scelta di una topologia influenza direttamente le prestazioni, la scalabilità e la tolleranza ai guasti del sistema.
+            </p>
+            <h3>Classificazione delle Topologie</h3>
+            <p>Le topologie di rete possono essere classificate in base a due principali criteri:</p>
+            <ul>
+                <li><strong>Connessioni Fisiche:</strong> Definiscono come i nodi sono fisicamente connessi tra loro.</li>
+                <li><strong>Modalità di Comunicazione:</strong> Identifica il modo in cui i dati si spostano tra i nodi (diretta o indiretta).</li>
+            </ul>
+             
+            <h3>Principali tipi di topologie</h3> 
+            <div class="topology-diagram"></div>
+            <center> <img width="492" height="231" src="topologie.jpg"> </center>
+      </div>
+            <ul>
+                <li>
+                    <strong>Topologia a Bus:</strong> Tutti i nodi condividono un unico canale di comunicazione. È semplice da implementare e conveniente, ma soffre di congestione quando il traffico di rete è elevato.
+                </li>
+                <li>
+                    <strong>Topologia a Stella:</strong> Tutti i nodi sono connessi a un nodo centrale (hub). È facile da configurare e diagnosticare, ma il nodo centrale rappresenta un punto critico di guasto.
+                </li>
+                <li>
+                    <strong>Topologia ad Albero:</strong> Una struttura gerarchica dove i nodi sono organizzati in livelli. È scalabile e adatta a reti gerarchiche, ma una rottura nei nodi superiori può isolare intere sezioni della rete.
+                </li>
+                <li>
+                    <strong>Topologia ad Anello(Ring):</strong> I nodi sono disposti in un anello chiuso, dove ogni nodo è collegato al successivo e l'ultimo è collegato al primo. È efficiente per trasmissioni continue, ma un guasto a un nodo interrompe l'intera rete.
+                </li>
+                <li>
+                    <strong>Topologia ad Albero Binario:</strong> Un caso specifico di topologia ad albero, in cui ogni nodo ha al massimo due figli. È particolarmente utile per applicazioni di ricerca e ordinamento.
+                </li>
+                <li>
+                    <strong>Topologia a Catena(Chain):</strong> I nodi sono collegati in una sequenza lineare. È semplice da implementare ma meno tollerante ai guasti rispetto ad altre topologie.
+                </li>
+                <li>
+                    <strong>Topologia a Maglia(Mesh):</strong> Ogni nodo è connesso a uno o più altri nodi in modo da formare una rete complessa. Garantisce alta tolleranza ai guasti, ma può essere costosa da implementare.
+                </li>
+                <li>
+                    <strong>Topologia a Maglia Completa:</strong> Ogni nodo è direttamente collegato a tutti gli altri nodi. Offre prestazioni ottimali e tolleranza ai guasti eccellente, ma richiede un numero elevato di connessioni.
+                </li>
+                <li>
+                    <strong>Topologia Peer-to-Peer(P2P):</strong> I nodi si collegano direttamente tra loro senza un server centrale. È altamente scalabile e decentralizzata, ma può soffrire di inefficienze nel routing dei dati.
+                </li>
+            </ul>
+
+            
+        </section>
+
+        <section>
+            <h2>Caratteristiche delle Topologie</h2>
+            <p>Le principali caratteristiche da considerare quando si progetta o si analizza una topologia di rete includono:</p>
+            <ul>
+                <li><strong>Diametro della rete:</strong> La massima distanza tra due nodi in termini di numero di salti.</li>
+                <li><strong>Grado del nodo:</strong> Il numero di connessioni dirette associate a un nodo.</li>
+                <li><strong>Connettività:</strong> La capacità della rete di rimanere operativa nonostante guasti a uno o più nodi.</li>
+                <li><strong>Latenza:</strong> Il tempo impiegato dai dati per viaggiare tra due nodi della rete.</li>
+                <li><strong>Scalabilità:</strong> La capacità della rete di crescere senza degradare significativamente le prestazioni.</li>
+            </ul>
+        </section>
+
+       
+    </div>
+    <footer>
+        studente:Matteo Mastrorosa  - classe:3CA   - email:mastrorosa12955714@luigidellerba.edu.it
+    </footer>
+</body>
+</html>
+
+

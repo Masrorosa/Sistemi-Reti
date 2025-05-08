@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modellazione dei Sistemi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="sistemi.html">I Sistemi</a></li>
+                <li><a href="modellazione.html">Modellazione dei Sistemi</a></li>
+                <li><a href="von-neumann.html">Il modello di Von Neumann</a></li>
+                <li><a href="cpu.html">La CPU</a></li>
+                <li><a href="memorie.html">Tipologie di memoria</a></li>
+                <li><a href="bus.html">I Bus e la comunicazione</a></li>
+                <li><a href="non-von-neumann.html">Le architetture non di Von Neumann</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Modellazione dei Sistemi</h1>
+        <p>La modellazione dei sistemi è fondamentale per comprendere e progettare sistemi complessi, consentendo di rappresentare matematicamente il loro comportamento e struttura.</p>
+
+        <h2>Automi a Stati Finiti</h2>
+        <p>Gli <strong>automi a stati finiti</strong> (Finite State Machines, FSM) sono modelli matematici utilizzati per descrivere sistemi che possono assumere un numero finito di stati. Un automa è definito da:</p>
+        <ul>
+            <li>Un insieme di stati.</li>
+            <li>Un insieme di input.</li>
+            <li>Una funzione di transizione che determina il passaggio tra stati.</li>
+            <li>Uno stato iniziale.</li>
+            <li>Un insieme di stati finali (opzionale).</li>
+        </ul>
+
+        <h1>Automi di Mealy e Moore</h1>
+        <p>Gli automi a stati finiti possono essere classificati in due principali categorie: automi di <strong>Mealy</strong> e automi di <strong>Moore</strong>. 
+            Entrambi sono usati per modellare sistemi di controllo e circuiti digitali, ma differiscono nel modo in cui l'output viene generato.</p>
+
+        <h2>Automa di Mealy</h2>
+        <p>Negli automi di Mealy, l'output dipende sia dallo stato corrente che dall'input. Questo significa che l'output può cambiare immediatamente quando l'input cambia.</p>
+        <ul>
+            <li><strong>Vantaggio:</strong> L'output può essere più reattivo ai cambiamenti degli input.</li>
+            <li><strong>Rappresentazione:</strong> Ogni arco del grafo di stato include sia la condizione di transizione sia l'output associato.</li>
+        </ul> <center><img src="meally.jpg" width="30%" height="30%"></center>
+
+        <h2>Automa di Moore</h2>
+        <p>Negli automi di Moore, l'output dipende solo dallo stato corrente, non direttamente dall'input. L'output cambia solo quando il sistema entra in un nuovo stato.</p>
+        <ul>
+            <li><strong>Vantaggio:</strong> L'output è più stabile, poiché non cambia immediatamente con gli input.</li>
+            <li><strong>Rappresentazione:</strong> Ogni stato del grafo include l'output associato.</li>
+        </ul><center><img src="moore.jpg" width="30%" height="30%"></center>
+
+        <center><h2>Confronto tra Mealy e Moore</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Caratteristica</th>
+                    <th>Automa di Mealy</th>
+                    <th>Automa di Moore</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Dipendenza dell'output</td>
+                    <td>Stato corrente e input</td>
+                    <td>Solo stato corrente</td>
+                </tr>
+                <tr>
+                    <td>Reattività</td>
+                    <td>Più rapido</td>
+                    <td>Più stabile</td>
+                </tr>
+                <tr>
+                    <td>Rappresentazione</td>
+                    <td>Output sulle transizioni</td>
+                    <td>Output sui nodi</td>
+                </tr>
+            </tbody>
+        </table></center>
+
+       
+    </main>
+
+    <footer>
+        studente:Matteo Mastrorosa              - classe:3CA             - email:mastrorosa12955714@luigidellerba.edu.it
+    </footer>
+</body> 
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La CPU</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="sistemi.html">I Sistemi</a></li>
+                <li><a href="modellazione.html">Modellazione dei Sistemi</a></li>
+                <li><a href="von-neumann.html">Il modello di Von Neumann</a></li>
+                <li><a href="cpu.html">La CPU</a></li>
+                <li><a href="memorie.html">Tipologie di memoria</a></li>
+                <li><a href="bus.html">I Bus e la comunicazione</a></li>
+                <li><a href="non-von-neumann.html">Le architetture non di Von Neumann</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>La CPU e i suoi Componenti</h1>
+        <p>La <strong>CPU (Central Processing Unit)</strong> è il cuore di un calcolatore. È responsabile dell'elaborazione delle istruzioni, della gestione dei dati e del controllo delle operazioni svolte dai componenti del sistema.</p>
+        <center><img src="CpuIm.jpg"  width="480" height="250" ></img></center>
+
+        <section id="alu">
+            <h2>Unità Aritmetico-Logica (ALU)</h2>
+            <p>L'ALU è la parte della CPU che esegue le operazioni matematiche e logiche. È fondamentale per il funzionamento del processore e si occupa di:</p>
+            <ul>
+                <li><strong>Operazioni Aritmetiche:</strong> Addizione, sottrazione, moltiplicazione e divisione.</li>
+                <li><strong>Operazioni Logiche:</strong> AND, OR, NOT, XOR (operazioni booleane).</li>
+                <li><strong>Operazioni sui bit:</strong> Shift e rotazioni bit a bit.</li>
+            </ul>
+            <p>L'ALU riceve i dati dai registri della CPU e invia i risultati ai registri o alla memoria principale.</p>
+        </section> <center><img src="alu.jpg"  width="480" height="250" ></img></center>
+
+
+        <section id="cu">
+            <h2>Unità di Controllo (CU)</h2>
+            <p>La CU è il "direttore d'orchestra" della CPU. Si occupa di coordinare tutte le operazioni interne ed esterne al processore, garantendo che vengano svolte correttamente.</p>
+            <p>Le sue principali funzioni sono:</p>
+            <ul>
+                <li><strong>Gestione del Ciclo di Istruzione:</strong>
+                    <ul>
+                        <li><em>Fetch:</em> Recupera l'istruzione dalla memoria.</li>
+                        <li><em>Decode:</em> Decodifica l'istruzione per identificare l'operazione da eseguire.</li>
+                        <li><em>Execute:</em> Coordina l'esecuzione dell'istruzione.</li>
+                    </ul>
+                </li>
+                <li><strong>Sincronizzazione delle Operazioni:</strong> Coordina le interazioni tra i componenti della CPU.</li>
+                <li><strong>Controllo del Flusso dei Dati:</strong> Regola il flusso di dati tra ALU, registri e memoria.</li>
+            </ul>
+            <p>La CU produce segnali di controllo che abilitano o disabilitano specifici componenti in base all'istruzione corrente.</p>
+        </section>
+
+        <section id="mar-md-ir">
+            <h2>Memory Address Register (MAR), Memory Data Register (MDR) e Instruction Register (IR)</h2>
+            <p>Il <strong>Memory Address Register (MAR)</strong>, il <strong>Memory Data Register (MDR)</strong> e l'<strong>Instruction Register (IR)</strong> sono registri cruciali nella gestione delle operazioni di memoria e nell'esecuzione delle istruzioni da parte della CPU.</p>
+
+            <h3>Memory Address Register (MAR)</h3>
+            <p>Il <strong>MAR</strong> è il registro che contiene l'indirizzo di memoria a cui la CPU deve accedere, sia per leggere che per scrivere i dati. Quando la CPU vuole accedere alla memoria, il MAR memorizza l'indirizzo di memoria per il quale è richiesta l'operazione di lettura o scrittura.</p>
+
+            <h3>Memory Data Register (MDR)</h3>
+            <p>Il <strong>MDR</strong> è il registro che contiene i dati letti dalla memoria o i dati che devono essere scritti nella memoria. Quando la CPU legge dati, questi vengono trasferiti dalla memoria al MDR. Allo stesso modo, quando la CPU scrive dati, il dato da scrivere è caricato nel MDR.</p>
+
+            <h3>Instruction Register (IR)</h3>
+            <p>L'<strong>Instruction Register (IR)</strong> è il registro che contiene l'istruzione che la CPU sta attualmente eseguendo. Quando un'istruzione viene recuperata dalla memoria, viene caricata nel registro IR dove viene decodificata e successivamente eseguita. L'IR è fondamentale per il ciclo di esecuzione, poiché memorizza l'operazione che la CPU deve compiere in quel momento.</p>
+
+            <p>Il processo di lettura o scrittura in memoria e l'esecuzione delle istruzioni avviene in questo modo:</p>
+            <ul>
+                <li>Il <strong>MAR</strong> contiene l'indirizzo di memoria da cui leggere o scrivere i dati.</li>
+                <li>Il <strong>MDR</strong> contiene i dati letti dalla memoria o i dati da scrivere nella memoria.</li>
+                <li>Il <strong>IR</strong> memorizza l'istruzione corrente che la CPU sta eseguendo, decodificando e processando.</li>
+            </ul>
+        </section>
+
+        <section id="ciclo-macchina">
+            <h2>Il Ciclo Macchina</h2>
+            <center><img src="cicloMacchina.jpg" width="280" height="280"></center>
+            <p>Il ciclo macchina è il processo fondamentale che una CPU segue per eseguire un'istruzione. Si compone di tre fasi principali:</p>
+            <ul>
+                <li><strong>Fetch:</strong> L'istruzione viene recuperata dalla memoria, utilizzando l'indirizzo memorizzato nel Program Counter (PC). L'istruzione viene poi caricata nell'Instruction Register (IR).</li>
+                <li><strong>Decode:</strong> L'istruzione nel IR viene decodificata dalla CPU per determinare che tipo di operazione deve essere eseguita.</li>
+                <li><strong>Execute:</strong> La CPU esegue l'operazione richiesta dall'istruzione, che può includere operazioni aritmetiche, logiche o l'accesso alla memoria tramite MAR e MDR.</li>
+            </ul>
+            <p>Queste fasi si ripetono continuamente, permettendo alla CPU di eseguire programmi e svolgere operazioni complesse. Ogni ciclo macchina si basa sull'orologio del processore, che sincronizza tutte le operazioni interne.</p>
+        </section>
+        
+        <section id="northbridge">
+            <h2>Il Northbridge</h2>
+            <p>Il <strong>Northbridge</strong> è un componente fondamentale nella gestione delle comunicazioni tra la CPU e altre componenti ad alte prestazioni del sistema. Tradizionalmente, il Northbridge si occupa di coordinare il traffico tra la CPU, la memoria RAM e altre periferiche come la GPU (scheda grafica) e le connessioni ad alta velocità (ad esempio, il bus PCI Express).</p>
+            <p>Le principali funzioni del Northbridge includono:</p>
+            <ul>
+                <li><strong>Gestione della memoria:</strong> Il Northbridge coordina l'accesso della CPU alla memoria RAM, permettendo operazioni di lettura e scrittura.</li>
+                <li><strong>Comunicazione con la GPU:</strong> Se la GPU è integrata nella scheda madre, il Northbridge gestisce la comunicazione tra la CPU e la GPU.</li>
+                <li><strong>Collegamento al bus di sistema:</strong> Il Northbridge gestisce la connessione tra la CPU e il bus di sistema, come il Front Side Bus (FSB) o il PCI Express, che permette la comunicazione con dispositivi periferici ad alte prestazioni.</li>
+                <li><strong>Supporto a interfacce ad alta velocità:</strong> Il Northbridge è anche responsabile della gestione di altre interfacce di comunicazione ad alta velocità, come il bus PCI Express, che collega la CPU con la memoria e le altre componenti cruciali.</li>
+            </ul>
+            <p>Con l'evoluzione dei processori, molte delle funzioni del Northbridge sono state integrate direttamente nella CPU, riducendo la necessità di un chip Northbridge separato. Tuttavia, in alcune architetture più vecchie o in sistemi specializzati, il Northbridge rimane un componente separato e fondamentale.</p>
+        </section>
+
+    </main>
+
+    <footer>
+        studente:Matteo Mastrorosa  - classe:3CA  - email:mastrorosa12955714@luigidellerba.edu.it
+    </footer>
+</body>
+</html>

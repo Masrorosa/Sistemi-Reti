@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Il Modello di Von Neumann e Harvard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="sistemi.html">I Sistemi</a></li>
+                <li><a href="modellazione.html">Modellazione dei Sistemi</a></li>
+                <li><a href="von-neumann.html">Il modello di Von Neumann</a></li>
+                <li><a href="cpu.html">La CPU</a></li>
+                <li><a href="memorie.html">Tipologie di memoria</a></li>
+                <li><a href="bus.html">I Bus e la comunicazione</a></li>
+                <li><a href="non-von-neumann.html">Le architetture non di Von Neumann</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Il Modello di Von Neumann e Harvard</h1>
+        <p>Le architetture di Von Neumann e Harvard sono due modelli fondamentali utilizzati nella progettazione dei calcolatori. 
+            Entrambi descrivono il modo in cui la CPU interagisce con la memoria per elaborare i dati e i programmi.</p>
+        
+        <h2>Il Modello di Von Neumann</h2>
+
+        <center><img  src="cpu.jpg" width="600" height="300"></center>
+
+        <p>Proposto da <strong>John von Neumann</strong> nel 1945, questo modello è alla base della maggior parte dei calcolatori moderni. 
+            È caratterizzato da un'architettura in cui programmi e dati condividono la stessa memoria.</p>
+        <ul>
+            <li><strong>Memoria unica:</strong> Programmi e dati sono memorizzati nello stesso spazio di memoria.</li>
+            <li><strong>Bus condiviso:</strong> Un unico bus di comunicazione viene usato per trasferire istruzioni e dati tra CPU e memoria.</li>
+            <li><strong>Semplicità:</strong> La struttura è più semplice da progettare e implementare.</li>
+            <li><strong>Effetto bottleneck:</strong> Poiché il bus è condiviso, il trasferimento dei dati può rallentare il sistema quando ci sono troppe richieste simultanee.</li>
+        </ul>
+        <p>Questo modello è utilizzato principalmente in calcolatori generici, come i computer personali.</p>
+
+        <h2>Il Modello Harvard</h2>
+
+        <center><img src="harvard.jpg " width="450" height="300"></center>
+
+        <p>L'architettura Harvard, originariamente sviluppata per il computer Mark I, utilizza memorie separate per istruzioni e dati. Questo design permette un'elaborazione più veloce e parallela.</p>
+        <ul>
+            <li><strong>Memorie separate:</strong> Una memoria è dedicata ai programmi (istruzioni) e un'altra ai dati.</li>
+            <li><strong>Bus distinti:</strong> Esistono due bus indipendenti per accedere alle memorie, riducendo i colli di bottiglia.</li>
+            <li><strong>Maggiore velocità:</strong> Le istruzioni e i dati possono essere trasferiti simultaneamente.</li>
+            <li><strong>Complessità:</strong> L'architettura è più complessa e costosa da implementare.</li>
+        </ul>
+        <p>Questo modello è comunemente usato in microcontrollori e sistemi embedded, dove velocità ed efficienza sono cruciali.</p>
+
+        <h2>Confronto tra le Architetture</h2>
+    <center><table border="1">
+            <thead>
+                <tr>
+                    <th>Caratteristica</th>
+                    <th>Von Neumann</th>
+                    <th>Harvard</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Struttura della memoria</td>
+                    <td>Unica per dati e istruzioni</td>
+                    <td>Separata per dati e istruzioni</td>
+                </tr>
+                <tr>
+                    <td>Bus di comunicazione</td>
+                    <td>Condiviso</td>
+                    <td>Indipendente</td>
+                </tr>
+                <tr>
+                    <td>Velocità</td>
+                    <td>Più lenta a causa del collo di bottiglia</td>
+                    <td>Più veloce grazie al trasferimento parallelo</td>
+                </tr>
+                <tr>
+                    <td>Implementazione</td>
+                    <td>Semplice e meno costosa</td>
+                    <td>Complessa e più costosa</td>
+                </tr>
+                <tr>
+                    <td>Applicazioni</td>
+                    <td>Calcolatori generici</td>
+                    <td>Sistemi embedded e microcontrollori</td>
+                </tr>
+            </tbody>
+        </table> </center>
+
+        <h2>Conclusioni</h2>
+        <p>Entrambe le architetture hanno vantaggi e svantaggi. Il modello di Von Neumann è ideale per calcolatori generici, grazie alla sua semplicità e versatilità. 
+            L'architettura Harvard, invece, è preferita nei sistemi dove sono richieste alte prestazioni e velocità.</p>
+    </main>
+
+    <footer>
+        studente:Matteo Mastrorosa   - classe:3CA - email:mastrorosa12955714@luigidellerba.edu.it
+    </footer>
+</body>
+</html>

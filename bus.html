@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Bus e la Comunicazione</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="sistemi.html">I Sistemi</a></li>
+                <li><a href="modellazione.html">Modellazione dei Sistemi</a></li>
+                <li><a href="von-neumann.html">Il modello di Von Neumann</a></li>
+                <li><a href="cpu.html">La CPU</a></li>
+                <li><a href="memorie.html">Tipologie di memoria</a></li>
+                <li><a href="bus.html">I Bus e la comunicazione</a></li>
+                <li><a href="non-von-neumann.html">Le architetture non di Von Neumann</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2>Introduzione ai Bus</h2>
+            <center><img src="bus.jpg " ></center>
+            <p>
+                I bus sono fondamentali per la comunicazione all'interno di un sistema di calcolo. 
+                Si tratta di canali di trasmissione che consentono lo scambio di dati, segnali di controllo e indirizzi tra le varie componenti del sistema, come CPU, memoria e periferiche.
+            </p>
+        </section>
+
+        <section>
+            <h2>Bus Interni ed Esterni</h2>
+            <p>
+                I bus si dividono in due categorie principali:
+            </p>
+            <ul>
+                <li><strong>Bus Interni:</strong> Collegano i componenti all'interno della CPU, come l'unità di controllo, l'ALU e i registri. Hanno velocità molto elevate per garantire un'elaborazione rapida.</li>
+                <li><strong>Bus Esterni:</strong> Collegano la CPU con la memoria principale, i dispositivi di I/O e altri componenti esterni. Generalmente, sono più lenti rispetto ai bus interni.</li>
+            </ul>
+            <p>
+                La principale differenza tra i due tipi risiede nella loro funzione e nel contesto operativo: i bus interni sono ottimizzati per la velocità, 
+                mentre i bus esterni sono progettati per la versatilità e la compatibilità con dispositivi diversi.
+            </p>
+        </section>
+
+        <section>
+            <h2>Caratteristiche dei Bus</h2>
+            <ul>
+                <li><strong>Bit Rate:</strong> Indica il numero di bit trasmessi al secondo.</li>
+                <li><strong>Larghezza del Bus:</strong> Numero di linee parallele su cui i dati possono essere trasmessi simultaneamente. 
+                    Una maggiore larghezza permette di trasferire più dati in un singolo ciclo.</li>
+                <li><strong>Velocità:</strong> Misura la frequenza di trasferimento dei dati, tipicamente espressa in MHz o GHz.</li>
+                <li><strong>Banda:</strong> La quantità totale di dati che il bus può trasmettere in un determinato periodo di tempo, solitamente espressa in MB/s o GB/s.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Bus Sincroni e Asincroni</h2>
+            <ul>
+                <li><strong>Bus Sincroni:</strong> Operano con un segnale di clock condiviso. I trasferimenti di dati avvengono a intervalli regolari sincronizzati dal clock. 
+                    Sono più semplici da implementare, ma meno flessibili per lunghe distanze.</li>
+                <li><strong>Bus Asincroni:</strong> Non richiedono un clock condiviso. Le comunicazioni sono coordinate tramite protocolli di handshake, 
+                    offrendo maggiore flessibilità e tolleranza ai ritardi, ma con una complessità maggiore.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Tipi di Arbitraggio</h3>
+            <p>
+                Nei sistemi con più dispositivi collegati a un bus, è necessario un meccanismo per stabilire quale dispositivo può utilizzare il bus in un determinato momento. 
+                Questo processo è noto come arbitraggio.
+            </p>
+            <ul>
+                <li><strong>Arbitraggio Centralizzato:</strong> Un singolo controllore (master) decide quale dispositivo ha accesso al bus. 
+                    È semplice e veloce, ma rappresenta un punto critico di guasto.</li>
+                <li><strong>Arbitraggio Distribuito:</strong> Ogni dispositivo contribuisce al processo decisionale, rendendo il sistema più resiliente ai guasti. 
+                    Tuttavia, è più complesso da implementare e può introdurre latenza aggiuntiva.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Bus di Espansione</h2>
+            <p>
+                I bus di espansione permettono di aggiungere nuove funzionalità a un sistema, come schede grafiche, schede di rete e dispositivi di archiviazione. Tra i bus di espansione più comuni troviamo:
+            </p>
+            <ul>
+                <li><strong>PCI (Peripheral Component Interconnect):</strong> Utilizzato per collegare componenti come schede grafiche e schede audio.</li>
+                <li><strong>PCIe (PCI Express):</strong> Una versione più veloce e scalabile del PCI, con una larghezza di banda elevata.</li>
+                <li><strong>USB (Universal Serial Bus):</strong> Usato per collegare periferiche esterne, come tastiere, mouse e dispositivi di archiviazione.</li>
+                <li><strong>Thunderbolt:</strong> Fornisce una combinazione di velocità elevate e supporto per dispositivi multipli.</li>
+            </ul>
+            <p>
+                Questi bus si differenziano per velocità, capacità di trasferimento dati e compatibilità con diversi tipi di dispositivi.
+            </p>
+        </section>
+
+    </div>
+    <footer>
+        studente:Matteo Mastrorosa - classe:3CA  - email:mastrorosa12955714@luigidellerba.edu.it
+    </footer>
+</body>
+</html>
